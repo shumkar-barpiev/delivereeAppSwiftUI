@@ -13,8 +13,6 @@ struct HomeView: View {
     @State private var openedStoresNumber = 56
     @State private var searchTextField = ""
     
-    let rightImage = UIImage(systemName: "trash")
-    
     
     var body: some View {
         VStack{
@@ -55,12 +53,17 @@ struct HomeView: View {
                         label: {
                             HStack{
                                 Text("\(addressName)")
+                                    .bold()
                                 Image(systemName: "chevron.down")
                             }
-                        
+                            .frame(width: 240)
+                            .overlay(content: {
+                                RoundedRectangle(cornerRadius: 5).stroke(Color(.systemGray6), lineWidth: 0.3)
+                            })
                         }
                         .fullScreenCover(isPresented: $isPresentedAddressView, content: {
                             AddressView(addressName: $addressName)
+                                
                         })
                     }
                     .foregroundColor(Color.black)
@@ -118,13 +121,9 @@ struct HomeView: View {
 //                    food list
                     FoodListView()
                    
-
-                        
                 }
             }
             .background(Color(.systemGray).opacity(0.1))
-            
-            
         }
     }
     
@@ -134,5 +133,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+.previewInterfaceOrientation(.portrait)
     }
 }

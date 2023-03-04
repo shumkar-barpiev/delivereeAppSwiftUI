@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct Address{
+struct AddressModel: Identifiable{
     let id: Int
-    let address: String
+    let addressName: String
     let addressExpression: String
     let addressIconImage: String
+    let editButtonStatus: Bool
 }
