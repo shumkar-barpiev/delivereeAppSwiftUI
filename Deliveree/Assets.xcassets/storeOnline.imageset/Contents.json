@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "storeOnline.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "icon1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

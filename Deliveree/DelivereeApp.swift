@@ -13,5 +13,6 @@ struct DelivereeApp: App {
         WindowGroup {
             DelivereeSplashView()
         }
+        
     }
 }
